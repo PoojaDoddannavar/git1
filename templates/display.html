@@ -1,0 +1,26 @@
+
+<h1 style="color:blue;text-align:center;background-color:azure;" >Job Details</h1>
+
+
+<div class="card">
+  <div class="card-header">
+  </div>
+  <div class="card-body">
+    
+    <!-- <h5 style="color:blue;text-align:center;background-color:aqua;" class="card-title">Job applied for Bangalore are {{g1}}</h5> -->
+    <h3 align="center">All Jobs in Location Hubli and Salary= 50k</h3>
+    {% for obj in g1 %}
+      <ul>
+        <li>
+          <p> Job Role <strong> {{obj.Jobrole}}</strong></p>
+          <p> Qualification <strong> {{obj.Qualification}}</strong></p>
+          <p> Specialisation <strong> {{obj.Specialisation}}</strong></p>
+          <p> Salary <strong> {{obj.Salary}}</strong></p>
+        </li>
+      </ul>
+    {% endfor %}
+     </div>
+</div>
+
+
+

@@ -1,0 +1,112 @@
+<html>
+     <head>
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <h1>Add Job</h1>
+          <style>
+              body {
+                   background-color: powderblue;
+                   border: 3px solid #0f0909;
+                   text-align:center;
+                   
+               }
+              h1{
+                   color: #0c0a09;
+                   text-align: center;
+               
+               }
+              p    {color: red;}
+
+
+              * {
+              box-sizing: border-box;
+                }
+
+               input[type=text], select, textarea {
+                    width: 20%;
+                    padding: 12px;
+                    border: 1px solid #ccc;
+                    border-radius: 2px;
+                    resize: vertical;
+                    }
+                    input[type=number], select, textarea {
+                    width: 50%;
+                    padding: 12px;
+                    border: 1px solid #ccc;
+                    border-radius: 2px;
+                    resize: vertical;
+                    }
+
+              label {
+                 padding: 12px 12px 12px 0;
+                 display: block;
+                 font-style: normal;
+                 font-size: medium;
+                 font-weight: bolder;
+                }
+
+               input[type=submit] {
+                     background-color: #af4ca7;
+                    color: white;
+                     padding: 12px 20px;
+                      border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    float: center;
+                 }
+
+                 input[type=submit]:hover {
+                       background-color: #4546a0;
+                      }
+          </style>
+          
+     </head>
+    <body>
+        
+
+        <a style=float:left href="/admin">Admin Login</a>
+       
+        <form action="roles/" method="post" style=float:Left>
+            {%csrf_token%}
+        <input  type ="submit" value="Views Job roles"></input>
+        </form>
+       
+        <form action="hubli/" method="post" style=float:Left >
+            {%csrf_token%}
+            <input type ="submit" value="Query"></input>
+        </form>
+        <br>
+        
+        <form action="add/" method="post">
+        {%csrf_token%}
+
+        <label for="Jobrole">Job Role</label>
+        <input id="Jobrole" type="text" name="Jobrole" value="{{Jobrole}} ">
+        <br>
+        
+        <label for="Qualification">Qualification</label>
+        <input id="Qualification" type="text" name="Qualification" value="{{Qualification}} ">
+        <br>
+        
+        <label for="Specialisation ">Specialisation</label>
+        <input id="Specialisation" type="text" name="Specialisation" value="{{Specialisation}} ">
+        <br>
+        
+        <label for="Location">Location</label>
+        <input id="Location" type="text" name="Location" value="{{ Location}} ">
+        <br>
+        
+        <label for="Salary">Salary</label>
+        <input id="Salary" type="number" name="Salary" value="{{ Salary}} ">
+        <br>
+        
+        <label for="ApplyDate">Apply Date</label>
+        <input id="ApplyDate" type="date" name="ApplyDate" value="{{ApplyDate}}">
+        <br>
+        
+        <input type="submit" value="SUBMIT">
+        
+        
+        
+        </form>
+    </body>
+</html>
