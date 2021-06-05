@@ -1,1 +1,0 @@
-web: gunicorn eval.wsgi --log-file -
